@@ -1,0 +1,7 @@
+<div class="form-group clearfix">
+    <label class="col-md-2 control-label" for="gitlabSiteUrl"><span class="required">*</span> {{:: 'gitlablocal-gitlab-siteurl' | translate}}</label>
+    <div class="col-md-6">
+        <input class="form-control" id="baseUrl" type="text" ng-model="identityProvider.config.gitlabSiteUrl">
+    </div>
+    <kc-tooltip>{{:: 'gitlablocal.gitlab-siteurl.tooltip' | translate}}</kc-tooltip>
+</div>
