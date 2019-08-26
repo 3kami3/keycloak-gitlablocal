@@ -30,8 +30,7 @@ Once you click the `Save application` button, the application will be created an
 
 1. Open `Themes` setting page in `master` realm. Then set `gitlablocal` theme as `Admin Console Theme`. Note: You may need to re-login for reloading the theme.
 2. Add `gitlablocal` Identity Provider in the realm which you want to configure.
-3. In the `gitlablocal` identity provider page, set `Client Id` and `Client Secret`.
-4. (Optional) Set Guild Id(s) to allow federation if you want.
+3. In the `gitlablocal` identity provider page, set `GitLab Site URL` and `Application Id` and `Application Secret`.
 
 
 ## Source Build
@@ -49,3 +48,7 @@ You can see `keycloak-gitlablocal-ear-<version>.ear` under `ear/target` director
 
 - [Koichiro Mikami](https://github.com/3kami3)
 
+## Acknowledgments
+
+I referred to the following project. Thank you.
+- [keycloak-discord](https://github.com/wadahiro/keycloak-discord) - Keycloak Social Login extension for Discord
