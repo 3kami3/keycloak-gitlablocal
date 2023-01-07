@@ -6,64 +6,54 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.keycloak.extensions</groupId>
-    <artifactId>keycloak-gitlablocal-parent</artifactId>
-    <version>0.1.0</version>
-    <packaging>pom</packaging>
+    <artifactId>keycloak-gitlablocal</artifactId>
+    <version>0.2.0</version>
+    <packaging>jar</packaging>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <version.keycloak>6.0.1</version.keycloak>
-        <version.wildfly.maven.plugin>2.0.1.Final</version.wildfly.maven.plugin>
+        <version.keycloak>20.0.2</version.keycloak>
     </properties>
 
-    <dependencyManagement>
-        <dependencies>
-            <dependency>
-                <groupId>org.keycloak.bom</groupId>
-                <artifactId>keycloak-spi-bom</artifactId>
-                <version>${version.keycloak}</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-            <dependency>
-                <groupId>org.keycloak.extensions</groupId>
-                <artifactId>keycloak-gitlablocal-ejb</artifactId>
-                <version>${project.version}</version>
-                <type>ejb</type>
-            </dependency>
-            <dependency>
-                <groupId>org.keycloak</groupId>
-                <artifactId>keycloak-server-spi-private</artifactId>
-                <scope>provided</scope>
-                <version>${version.keycloak}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.keycloak</groupId>
-                <artifactId>keycloak-services</artifactId>
-                <scope>provided</scope>
-                <version>${version.keycloak}</version>
-            </dependency>
-        </dependencies>
-    </dependencyManagement>
-
-    <modules>
-        <module>ejb</module>
-        <module>ear</module>
-    </modules>
+    <dependencies>
+        <dependency>
+            <groupId>org.keycloak</groupId>
+            <artifactId>keycloak-core</artifactId>
+            <scope>provided</scope>
+            <version>${version.keycloak}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.keycloak</groupId>
+            <artifactId>keycloak-server-spi</artifactId>
+            <scope>provided</scope>
+            <version>${version.keycloak}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.keycloak</groupId>
+            <artifactId>keycloak-server-spi-private</artifactId>
+            <scope>provided</scope>
+            <version>${version.keycloak}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.keycloak</groupId>
+            <artifactId>keycloak-services</artifactId>
+            <scope>provided</scope>
+            <version>${version.keycloak}</version>
+        </dependency>
+    </dependencies>
 
     <build>
-        <pluginManagement>
-            <plugins>
-                <plugin>
-                    <groupId>org.wildfly.plugins</groupId>
-                    <artifactId>wildfly-maven-plugin</artifactId>
-                    <version>${version.wildfly.maven.plugin}</version>
-                    <configuration>
-                        <skip>true</skip>
-                    </configuration>
-                </plugin>
-            </plugins>
-        </pluginManagement>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.10.1</version>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
+        </plugins>
     </build>
 </project>

@@ -5,8 +5,8 @@ Keycloak Social Login extension for GitLabLocal.
 
 ## Install
 
-Download `keycloak-gitlablocal-ear-<version>.ear` from [Releases page](https://github.com/3kami3/keycloak-gitlablocal/releases).
-Then deploy it into `$KEYCLOAK_HOME/standalone/deployments/` directory.
+Download `keycloak-gitlablocal-<version>.jar` from [Releases page](https://github.com/3kami3/keycloak-gitlablocal/releases).
+Then deploy it into `$KEYCLOAK_HOME/providers` directory.
 
 ## Setup
 
@@ -37,7 +37,7 @@ Note: You don't need to setup the theme in `master` realm from v0.2.0.
 ## Source Build
 
 Clone this repository and run `mvn package`.
-You can see `keycloak-gitlablocal-ear-<version>.ear` under `ear/target` directory.
+You can see `keycloak-gitlablocal-<version>.jar` under `target` directory.
 
 
 ## Licence
