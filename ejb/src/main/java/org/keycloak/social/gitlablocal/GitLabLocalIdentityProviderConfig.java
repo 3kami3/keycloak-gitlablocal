@@ -34,6 +34,9 @@ public class GitLabLocalIdentityProviderConfig extends OIDCIdentityProviderConfi
         super(model);
     }
 
+    public GitLabLocalIdentityProviderConfig() {
+    }
+
     public String getGitlabSiteUrl() {
         return getConfig().get("gitlabSiteUrl");
     }

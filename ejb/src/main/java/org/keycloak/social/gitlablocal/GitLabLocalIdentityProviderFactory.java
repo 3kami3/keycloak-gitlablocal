@@ -42,6 +42,11 @@ public class GitLabLocalIdentityProviderFactory extends AbstractIdentityProvider
     }
 
     @Override
+    public GitLabLocalIdentityProviderConfig createConfig() {
+        return new GitLabLocalIdentityProviderConfig();
+    }
+
+    @Override
     public String getId() {
         return PROVIDER_ID;
     }
