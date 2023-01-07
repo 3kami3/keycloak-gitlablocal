@@ -22,7 +22,7 @@ You must create an Application in GitLab so that Keycloak can make an OAuth conn
 You will need to provide the following information in the form:
 * Name - Keycloak
 * Redirect URI - https://keycloak.example.com/auth/realms/example/broker/gitlablocal/endpoint
-* Scopes - api, read_user, openid
+* Scopes - openid, read_user
 
 Once you click the `Save application` button, the application will be created and you will be shown the generated `Client Id` and `Client Secret`.
 

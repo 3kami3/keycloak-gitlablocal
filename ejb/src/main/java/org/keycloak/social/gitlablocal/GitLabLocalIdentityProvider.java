@@ -49,7 +49,7 @@ public class GitLabLocalIdentityProvider extends OIDCIdentityProvider  implement
 	private static final String AUTH_RESOURCE = "/oauth/authorize";
 	private static final String TOKEN_RESOURCE = "/oauth/token";
 	private static final String PROFILE_RESOURCE = "/api/v4/user";
-	private static final String API_SCOPE = "api";
+	private static final String READ_USER_SCOPE = "read_user";
 
 	public GitLabLocalIdentityProvider(KeycloakSession session, GitLabLocalIdentityProviderConfig config) {
 		super(session, config);
@@ -61,7 +61,7 @@ public class GitLabLocalIdentityProvider extends OIDCIdentityProvider  implement
 		String defaultScope = config.getDefaultScope();
 
 		if (defaultScope.equals(SCOPE_OPENID)) {
-			config.setDefaultScope((API_SCOPE + " " + defaultScope).trim());
+			config.setDefaultScope((READ_USER_SCOPE + " " + defaultScope).trim());
 		}
 	}
 
