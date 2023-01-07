@@ -28,9 +28,10 @@ Once you click the `Save application` button, the application will be created an
 
 ### Keycloak
 
-1. Open `Themes` setting page in `master` realm. Then set `gitlablocal` theme as `Admin Console Theme`. Note: You may need to re-login for reloading the theme.
-2. Add `gitlablocal` Identity Provider in the realm which you want to configure.
-3. In the `gitlablocal` identity provider page, set `GitLab Site URL` and `Application Id` and `Application Secret`.
+Note: You don't need to setup the theme in `master` realm from v0.2.0.
+
+1. Add `gitlabloacl` Identity Provider in the realm which you want to configure.
+2. In the `gitlablocal` identity provider page, set `GitLab Site URL` and `Application Id` and `Application Secret`.
 
 
 ## Source Build
